@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://img1.taiyuehd.net/Public/css/style.css">
+    <script src="/wap/js/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+          var intervalId;
+          $(document).ready(function () {
+
+              //              var ua = navigator.userAgent.toLowerCase();
+              //              var isWeixin = ua.indexOf('micromessenger') != -1;
+              //              var isAndroid = ua.indexOf('android') != -1;
+              //              var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+              //              if (!isWeixin) {
+              //                  document.head.innerHTML = '<title>抱歉，出错了</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.1/weui.css">';
+              //                  document.body.innerHTML = '<div class="weui_msg"><div class="weui_icon_area"><i class="weui_icon_info weui_icon_msg"></i></div><div class="weui_text_area"><h4 class="weui_msg_title">请在微信客户端打开链接</h4></div></div>';
+              //              }
+
+
+              getHDstatus();
+              intervalId = window.setInterval("getHDstatus()", 60 * 1000);
+
+
+          });
+
+
+          // getPara
+          function getHDstatus() {
+              var urlUser = '/ajax.aspx?type=getIsRun&t=' + new Date();
+              $.ajax({
+                  url: urlUser,
+                  async: false,
+                  success: function (data) {
+
+                      if (data.split('$')[0] == 'False') {
+
+                            $("#txtisrunn").html(data.split('$')[2]);
+                       //   $("#txtisrunn").html('意向购房人登记 <br/>公测时间：2018年8月28日15:00-18:00<br/>' );
+                      }
+                      else {
+                          window.location.href = data.split('$')[1];
+                          //  $("#txtisrunn").html('网上选房活动进行中。。。。。');
+                      }
+
+
+                  },
+                  error: function (data) {
+
+                  }
+              });
+
+          }
+    </script>
+
+
+
+    <script language="JavaScript" type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style=" text-align:center; vertical-align:middle; font-size:30px;   color:white;" id="txtisrunn"></div>
+        <br />
+        <br />
+        <br />
+        <br /> <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="bottom">Powered by 泰悦互动</div>
+
+
+
+</body>
+</html>

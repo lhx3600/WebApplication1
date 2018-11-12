@@ -1,0 +1,480 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>资格申请</title>
+    <!--<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <script src="http://img2.taiyuehd.net/wap/js/TYHelp.js" type="text/javascript"></script>
+    <script src="http://img2.taiyuehd.net/wap/js/jquery.min.js" type="text/javascript"></script>
+    <link href="http://img2.taiyuehd.net/wap/css/register.css" rel="stylesheet" type="text/css" />
+    <link href="/wap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/layui/css/layui.css" rel="stylesheet" type="text/css" />
+    <script src="http://img2.taiyuehd.net/layui/layui.js" type="text/javascript"></script>
+    <script src="/wap/js/index.js" type="text/javascript"></script>
+
+
+
+</head>
+
+<script src="http://img2.taiyuehd.net/wap/js/WAPcutDown.js" type="text/javascript"></script>
+<script src="/wap/js/sq.js?v=3" type="text/javascript"></script>
+
+
+<body style=" background:#e9e9e9;">
+
+    <form class="layui-form" action="" lay-filter="example" enctype="multipart/form-data">
+
+        <div class="layui-tab layui-tab-card" lay-filter="demoxxx" style="width: 90%;  margin-left:5%; ">
+            <ul class="layui-tab-title" style=" height:90px;   ">
+                <li class="layui-this" class="mytest" lay-id="demo00">基本信息</li>
+                <li class="mytest" lay-id="demo11" id="demo11">身份证</li>
+                <li class="mytest" lay-id="demo22" id="demo22">户口</li>
+
+                <li class="mytest" lay-id="demo44" id="demo44">婚姻状况</li>
+                <br />
+                <li class="mytest" lay-id="demo33" id="demo33">社保</li>
+                <li class="mytest" lay-id="demo55" id="demo55">房查</li>
+                <li class="mytest" lay-id="demo66" id="demo66">验资证明</li>
+                <li class="mytest" lay-id="demo77" id="demo77">征信</li>
+            </ul>
+
+            <div class="layui-tab-content" style=" text-align:left; ">
+
+                <div id="myloading" style=" display:none;"><img src="images/load.gif" />图片上传中......</div>
+
+                <!--  基本信息0000-->
+                <div class="layui-tab-item layui-show">
+
+                    <div class="layui-form-item" style=" text-align:left; ">
+                        <label class="layui-form-label" style=" text-align:left; ">姓名</label>
+                        <div class="layui-input-block">
+                            <input name="fname" class="layui-input" type="text" id="fname" style=" background-color:#e9e9e9" autocomplete="off" disabled= disabled lay-verify="title">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:100px;text-align:left;">证件号码</label>
+                        <div class="layui-input-block">
+                            <input name="fcardno" class="layui-input" type="text" id="fcardno" style=" background-color:#e9e9e9" autocomplete="off" disabled= disabled lay-verify="title">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" text-align:left; ">手机号</label>
+                        <div class="layui-input-block">
+                            <input name="ftel" class="layui-input" type="text" id="ftel" style=" background-color:#e9e9e9" autocomplete="off" disabled= disabled lay-verify="title">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:100px;text-align:left;">婚姻状况</label>
+                        <div class="layui-input-block">
+                            <input name="fhyzk" title="未婚" type="radio" lay-filter="fhyzk" value="1">
+                            <input name="fhyzk" title="离异" type="radio" lay-filter="fhyzk" value="2">
+                            <input name="fhyzk" title="已婚" type="radio" lay-filter="fhyzk" value="3">
+                            <input name="fhyzk" title="丧偶" type="radio" lay-filter="fhyzk" value="4">
+                        </div>
+                    </div>
+
+                    <hr style="  background-color:White;    " />
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:100px;text-align:left;">是否联名</label>
+                        <div class="layui-input-block">
+                            <input name="lmgf" title="是" type="radio" lay-filter="lmgf" value="1">
+                            <input name="lmgf" title="否" type="radio" lay-filter="lmgf" value="0">
+                        </div>
+                    </div>
+                    <hr style="  background-color:White;    " />
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:100px;text-align:left;">本地户口</label>
+                        <div class="layui-input-block">
+                            <input name="bdhk" title="是" type="radio" lay-filter="bdhk" value="1">
+                            <input name="bdhk" title="否" type="radio" lay-filter="bdhk" value="0">
+                        </div>
+                    </div>
+                    <hr style="  background-color:White;    " />
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:130px;text-align:left;">未成年子女</label>
+                        <div class="layui-input-block">
+                            <input name="wcngf" title="有" type="radio" lay-filter="wcngf" value="1">
+                            <input name="wcngf" title="无" type="radio" lay-filter="wcngf" value="0">
+                        </div>
+
+
+                    </div>
+                    <font style=" color:gray; font-size:14px; border:0px solid red;    "> 如有未成年子女，请在户口页面上传未成年子女户口（首页、户主页、本人页扫描）</font>
+
+                    <hr style="  background-color:White;    " />
+
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style=" width:100px;text-align:left;">付款方式</label>
+                        <div class="layui-input-block" style=" font-size:12px; ">
+                            <input name="fkfs" title="一次性" type="radio" lay-filter="fkfs" value="1">
+                            <input name="fkfs" title="商贷" type="radio" lay-filter="fkfs" value="2">
+                            <input name="fkfs" title="公积金" type="radio" lay-filter="fkfs" value="3">
+                            <input name="fkfs" title="组合贷款" type="radio" lay-filter="fkfs" value="4">
+                        </div>
+                    </div>
+
+                    <hr style="  background-color:White;    " />
+                    <br />
+                    <font style=" color:gray; font-size:14px; border:0px solid red;    ">
+                        客户确保具备购房资格，如因无购房资格导致购房后无法及时备案的，将扣除定金，做退房处理。
+                    </font>
+                    <br /> <br />
+
+                    <div class="layui-form-item">
+
+                        <span class="  " style=" color:Red;" id="fstatus11"></span>
+
+                    </div>
+
+                    <button class="layui-btn site-demo-active" id="btnNext" data-type="tabChange1" style="  display:none;width:100%;" type="button">开始上传资料</button>  <br /><br />
+                    <!--<button class="layui-btn site-demo-active layui-btn-danger"  id="demoTJ" data-type="tabChange9"   style="  display:none;width:90%; " type="button">提交审核</button>  -->
+                    <!--  <button class="layui-btn layui-btn-danger"  id="demoTJ"   data-type="tabChange9" style=" display:none; width:100px;"  type="button" >提交审核</button>-->
+                    <br /><br /><br /><br /><br />
+
+                </div>
+                <!--身份111-->
+
+                <div class="layui-tab-item  ">
+
+
+                    <center>
+
+
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test1" type="button"><i class="layui-icon"></i>身份信息(上传)</button><br />
+                        <div style="  color:#808080; font-size:12px;  ">每张图片大小不能超过2M</div>
+
+
+                        <div class="layui-inline layui-word-aux">
+
+                        </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red; padding:10px; " id="demo1"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+                            1.未婚/离异/丧偶：身份证（正反面扫描在一张上）。<br />
+                            2.已婚：夫妻双方身份证（夫妻双方正反面各扫描在一张纸上）。<br />
+                            3.军人：身份证（正反面扫描在一张上）、军官证（封面加内页扫描）、军人保障卡（扫描）、政治处证明
+                            （政治处盖章，未婚的注明“未婚”，部队专用纸扫描）。
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="Button1" data-type="tabChange2" style=" width:90%; " type="button">下一步</button> <br /><br />
+
+
+
+
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange101" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic1" style=" display:none;">
+                            <img src="#" id="sfz1" style=" width:90%; height:300px;" /><br />
+                            军官证<br />
+                            <img src="#" id="sfz2" style=" width:90%; height:300px;" /><br />
+                            军人保障卡
+                            <br />
+                            <img src="#" id="sfz3" style=" width:90%; height:300px;" /><br />
+
+                        </div>
+                        <br /><br /><br /><br /><br />
+                    </center>
+
+
+                </div>
+
+                <!--  户口222-->
+
+                <div class="layui-tab-item">
+
+
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test2" type="button"><i class="layui-icon"></i>户口信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red; padding:10px;" id="demo2"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+
+                            1.未婚:户口本(首页、户主页、本人页扫描)<br />
+                            2.离异:户口本(首页、户主页、本人页扫描)婚姻状
+                            况需要更改为“离婚”<br />
+                            3.已婚:夫妻双方户口本(首页、户主页、本人页扫
+                            描),婚姻状况需要更改为“已婚",如有未成年子
+                            女,需提供未成年子女户口(首页、户主页、本人页
+                            扫描)<br />
+                            4.丧偶:户口本(首页、户主页、本人页扫描),婚姻
+                            状况需更改为“丧偶”
+
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="tabChange102" data-type="tabChange3" style=" width:90%; " type="button">下一步</button> <br /><br />
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange102" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic2" style=" display:none;">
+                            户口首页<br />
+                            <img src="#" id="hk1" style=" width:90%; height:300px;" /><br />
+                            个人页和户主页<br />
+                            <img src="#" id="hk2" style=" width:90%; height:300px;" /><br />
+                        </div>
+                        <br /><br /><br /><br /><br />
+
+                    </center>
+
+
+                </div>
+
+                <!--婚姻状况444-->
+                <div class="layui-tab-item">
+
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test4" type="button"><i class="layui-icon"></i>婚姻信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red;padding:10px;" id="demo4"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+
+                            <font style="  color:Red; ">1.未婚无需提供</font><br />
+
+                            2.离异:离婚证(首页、照片页扫描)、离婚协议(需
+                            民政局盖章再扫描)<br />
+                            3.已婚:结婚证(夫妻一方结婚证首页、照片页扫描)
+
+
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="Button4" data-type="tabChange5" style=" width:90%; " type="button">下一步</button> <br /><br />
+
+                        <!--    <button class="layui-btn site-demo-active"  id="Button2" data-type="tabChange888"   style=" width:90%; "   type="button">上传完毕，提交审核</button> <br/><br/>-->
+
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange104" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic4" style=" display:none;">
+                            结婚证<br />
+                            <img src="#" id="hyzk1" style=" width:90%; height:300px;" /><br />
+                            离婚证<br />
+                            <img src="#" id="hyzk2" style=" width:90%; height:300px;" /><br />
+                            离婚协议书<br />
+                            <img src="#" id="hyzk3" style=" width:90%; height:300px;" /><br />
+
+                        </div>
+                        <br /><br /><br /><br /><br />
+
+                    </center>
+                </div>
+
+
+                <!--社保333-->
+                <div class="layui-tab-item">
+
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test3" type="button"><i class="layui-icon"></i>社保信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red;padding:10px;" id="demo3"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+
+                            <font style="  color:Red; ">1.武汉市户口无需提供</font><br />
+
+
+                            2、非武汉市户口需提供“武汉市社会保险参保缴费证明”或连续2年武汉市纳税证明；<br />
+                            3、打印时间为：2018年10月<br />
+
+
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="Button3" data-type="tabChange4" style=" width:90%; " type="button">下一步</button> <br /><br />
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange103" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic3" style=" display:none;">
+                            密码条<br />
+                            <img src="#" id="sb1" style=" width:90%; height:300px;" /><br />
+                            社保明细<br />
+                            <img src="#" id="sb2" style=" width:90%; height:300px;" /><br />
+                        </div>
+                        <br /><br /><br /><br /><br />
+                    </center>
+
+
+                </div>
+
+
+                <!--房产555-->
+                <div class="layui-tab-item">
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test5" type="button"><i class="layui-icon"></i>房查信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red;padding:10px;" id="demo5"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+
+
+                            1、	通过微信关注“武汉住房保障”进行查询，并保存查询结果进行上传。<br />
+                            2、	必须以家庭为单位进行查询，在武汉市无自有住房，且三年内无房产交易记录。<br />
+
+
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="Button5" data-type="tabChange6" style=" width:90%; " type="button">下一步</button> <br /><br />
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange105" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic5" style=" display:none;">
+
+                            房查结果<br />
+                            <img src="#" id="fc1" style=" width:90%; height:300px;" /><br />
+
+                        </div>
+                        <br /><br /><br /><br /><br />
+
+                    </center>
+                </div>
+
+                <!-- 收入666-->
+
+                <div class="layui-tab-item">
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:90%; " id="test6" type="button"><i class="layui-icon"></i>验资证明信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red;padding:10px;" id="demo6"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+
+
+
+                            1、客户自行办理中国银行储蓄卡，存入50万资金；<br />
+                            2、通过中国银行手机银行APP查询余额，并截图余额界面；<br />
+                            3、银行开卡人必须与购房人一致（若他人代办，则银行卡开户人必须为直系亲属）；<br />
+                            4、余额截图上传。<br />
+
+
+                            <br />
+
+                            <br />
+                        </div>
+                        <!--<button class="layui-btn site-demo-active"  id="Button2" data-type="tabChange8"   style=" width:100%; "   type="button">上传完毕，提交审核</button> <br/><br/>-->
+                        <button class="layui-btn site-demo-active" id="Button6" data-type="tabChange7" style=" width:90%; " type="button">下一步</button> <br /><br />
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange106" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic6" style=" display:none;">
+                            验资证明<br />
+                            <img src="#" id="sr1" style=" width:90%; height:300px;" /><br />
+
+
+                        </div>
+                        <br /><br /><br /><br />
+
+                    </center>
+
+                </div>
+
+                <!-- 征信777-->
+
+                <div class="layui-tab-item">
+                    <center>
+                        <button class="layui-btn layui-btn-danger btnupimp" style=" width:150px;" id="test7" type="button"><i class="layui-icon"></i>征信信息(上传)</button><br />
+
+                        <div class="layui-inline layui-word-aux"> </div>
+                        <br />
+
+                        <div class="layui-upload-img" style=" border:1px solid red;padding:10px;" id="demo7"> </div>
+
+                        <br />
+                        <div style=" text-align:left;">
+                            <font style="  color:Red; ">1.全款无需提供</font><br />
+
+
+                            2.未婚、离异、丧偶:详细版个人信用报告(查询日期
+                            为:2018年10月)<br />
+                            3.已婚:夫妻双方详细版征信报告(查询日期为:2018
+                            年10月)<br />
+                            4.如需共同还款人,还需提供共同还款人所有家庭成员
+                            的征信报告。<br />
+                            5.可登陆中国人民银行征信中心网站线上查询,并将查
+                            询结果上传(需至少提前24小时查询)。
+                            <br />
+                            6.为便于资料审核及打印，每种资料需单独上传。
+
+
+                            <br />
+                        </div>
+                        <button class="layui-btn site-demo-active" id="Button7" data-type="tabChange8" style=" width:100%; " type="button">上传完毕，提交审核</button> <br /><br />
+                        <button class="layui-btn site-demo-active layui-btn-warm" data-type="tabChange107" style=" width:90%; " type="button">示例图片，点击查看</button><br />
+                        <div id="samplePic7" style=" display:none;">
+                            个人信用报告<br />
+                            <img src="#" id="zx1" style=" width:90%; height:300px;" /><br />
+
+                        </div>
+                        <br /><br /><br /><br /><br />
+
+                    </center>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <nav class="mui-bar mui-bar-tab">
+            <div class="t-line">
+                <a href="/wap/tyhome.htm" class="aui-tab-item ">
+                    <i class="glyphicon glyphicon-home"><br />首页</i>
+                </a>
+
+                <a class="aui-tab-item mui-active" href="sq.htm">
+                    <i class="glyphicon glyphicon-list"><br />资格申请</i>
+
+                </a>
+                <a href="/wap/userC.htm" class="aui-tab-item">
+                    <i class="glyphicon glyphicon glyphicon-user"><br />我</i>
+                </a>
+            </div>
+
+        </nav>
+
+
+
+        <!-- 程序用共用提示弹框 -->
+        <div class="winpop public1" id="public1" style=" background-color:Gray;">
+            <div class="PopDiv">
+                <!--  <a href="javascript:PopHide('#public1');" class="close"></a>-->
+                <div class="poptit"><h1>正在排队请求中...请稍候！</h1></div>
+                <div class="popbox text tc">
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+</body>
+</html>
